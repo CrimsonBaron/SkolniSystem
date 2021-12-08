@@ -21,7 +21,8 @@ public class App {
         classRooms.get(0).listStudents();
         classRooms.get(0).printSumClassRoom();
         classRooms.get(0).printSubjectGrade("MAT");
-        classRooms.get(0).getStudentAtIndex(1);
+            classRooms.get(0).getStudentAtIndex(1).printGrades();
+            classRooms.get(0).getStudentAtIndex(1).getGradeSummary();
 
 
     }
