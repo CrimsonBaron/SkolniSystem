@@ -12,7 +12,7 @@ public interface ClassRoom {
     Student getStudentAtIndex(int i);
     void listStudents();
 
-    void printSubjectGrade(Subjects s);
+    void printSubjectGrade(String s);
     void printSumClassRoom();
 
 

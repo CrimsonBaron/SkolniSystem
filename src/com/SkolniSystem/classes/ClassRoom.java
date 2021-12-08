@@ -48,7 +48,7 @@ public class ClassRoom implements com.SkolniSystem.interfaces.ClassRoom {
     }
 
     @Override
-    public void printSubjectGrade(Subjects s) {
+    public void printSubjectGrade(String s) {
         List<Integer> tempGrades = new ArrayList<Integer>();
         int grade = 0;
         if (!students.isEmpty()){
