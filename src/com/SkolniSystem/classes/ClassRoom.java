@@ -53,7 +53,12 @@ public class ClassRoom implements com.SkolniSystem.interfaces.ClassRoom {
         int grade = 0;
         if (!students.isEmpty()){
             for (Student stu:students) {
-                tempGrades.add(stu.getSingleGrade(s));
+                if(stu.getGrades().containsKey(s)) {
+                    for (int i = 0; i < stu.getGrades().get(s).length; i++) {
+                        tempGrades.add(stu.getGrades().get(s)[i]);
+
+                    }
+                }
             }
 
             for (int i:tempGrades) {
