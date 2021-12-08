@@ -69,6 +69,11 @@ public class ClassRoom implements com.SkolniSystem.interfaces.ClassRoom {
 
     @Override
     public void printSumClassRoom() {
-
+        int grade = 0;
+        for (Student s: students) {
+            grade += s.getGradeSummary();
+        }
+        grade /= students.size();
+        System.out.println("class sum is: "+grade);
     }
 }
