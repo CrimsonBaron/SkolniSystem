@@ -1,7 +1,17 @@
 package com.SkolniSystem.interfaces;
 
+import com.SkolniSystem.enums.Subjects;
+
 public interface Student {
-    void getMark();
-    void getSubject();
+
+
+    String getName();
+    int[] getGrades();
+    int getSingleGrade(Subjects s);
+    void printGrades();
+    void printSingleGrade(Subjects s);
+    void printSummarry();
+
+
 
 }
