@@ -9,7 +9,7 @@ public interface Student {
 
 
     String getName();
-    Map<String, List<Integer>> getGrades();
+    Map<String, int[]> getGrades();
     int getSingleGrade(String s);
     int getGradeSummary();
     void printGrades();

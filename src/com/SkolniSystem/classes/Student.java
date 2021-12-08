@@ -1,19 +1,16 @@
 package com.SkolniSystem.classes;
 
-import com.SkolniSystem.enums.Subjects;
-
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Student implements com.SkolniSystem.interfaces.Student {
 
     private String name;
-    private Map<String, List<Integer>> grades;
+    private Map<String, int[]> grades;
 
-    public Student(String name, String[] grades) {
+    public Student(String name, int... i) {
         this.name = name;
         this.grades = new HashMap<>();
+        grades.put(name, i);
     }
 
     @Override
@@ -22,7 +19,7 @@ public class Student implements com.SkolniSystem.interfaces.Student {
     }
 
     @Override
-    public Map<String, List<Integer>> getGrades() {
+    public Map<String, int[]> getGrades() {
         return grades;
     }
 
@@ -30,21 +27,29 @@ public class Student implements com.SkolniSystem.interfaces.Student {
     public int getSingleGrade(String s) {
         for (String sub: grades.keySet()) {
             if (sub.equals(s)){
-                return grades.get(sub);
+                return grades.get(sub)[0];
             }
         }
+        return 0;
     }
 
     @Override
     public int getGradeSummary() {
+        List<Integer> tempList = new ArrayList<>();
         int grade = 0;
-        for (String i :grades) {
-            if (!i.equals("N")){
-                grade += Integer.parseInt(i);
+        for (String sub: grades.keySet()) {
+            for (int i:grades.get(sub)) {
+                tempList.add(i);
             }
         }
 
-        grade /= grades.length;
+        for (int i:tempList) {
+            grade +=i;
+        }
+
+
+
+        grade /= tempList.size();
 
         return grade;
     }
@@ -52,11 +57,7 @@ public class Student implements com.SkolniSystem.interfaces.Student {
     @Override
     public void printGrades() {
 
-        for (String i :grades) {
-            if (!i.equals("N")){
-                System.out.println(Subjects);
-            }
-        }
+
     }
 
     @Override
