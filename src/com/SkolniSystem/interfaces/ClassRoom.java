@@ -1,19 +1,15 @@
 package com.SkolniSystem.interfaces;
 
-import com.SkolniSystem.enums.Subjects;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public interface ClassRoom {
 
-    ArrayList<Student> getStudents();
-    void addStudent(Student s);
-    Student getLastStudents();
-    Student getStudentAtIndex(int i);
-    void listStudents();
-
-    void printSubjectGrade(String s);
-    void printSumClassRoom();
+    List<Student> getStudents();
+    double getSumOfSubject(String subject);
+    void printSumOfClass();
+    void printSumOfSubject(String subject);
 
 
 }

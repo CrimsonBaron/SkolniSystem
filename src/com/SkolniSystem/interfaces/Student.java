@@ -1,21 +1,16 @@
 package com.SkolniSystem.interfaces;
 
-import com.SkolniSystem.enums.Subjects;
+
 
 import java.util.List;
 import java.util.Map;
 
 public interface Student {
 
-
+    Map<String, String[]> getGrades();
     String getName();
-    Map<String, int[]> getGrades();
-    int getSingleGrade(String s);
-    int getGradeSummary();
-    void printGrades();
-    void printSingleGrade(String s);
-    void printSummarry();
 
+    void printSummary();
 
 
 }
