@@ -29,7 +29,10 @@ public class App {
                         new String[][]{{"1","2","5"},{"1","1","2"}}),
                 new Student("novak2",
                         new String[]{"Math","language"},
-                        new String[][]{{"2","2","3"},{"5","1","2"}}))
+                        new String[][]{{"2","2","3"},{"5","1","2"}}),
+                new Student("novak3",
+                        new String[]{"Math","language"},
+                        new String[][]{{"2","2","3"},{"5","1","2","5","5"}}))
         );
 
         classRoomManager.getClasses().put("2ai", new ClassRoom(
@@ -38,7 +41,7 @@ public class App {
                         new String[][]{{"3","3","5"},{"1","4","2"}}),
                 new Student("bb2",
                         new String[]{"Math","language"},
-                        new String[][]{{"2","5","3"},{"5","4","2"}}))
+                        new String[][]{{"2","5","3"},{"5","5","5","5"}}))
         );
 
         System.out.println("--------------------------1ai----------------------------------");
